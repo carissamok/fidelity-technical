@@ -1,0 +1,60 @@
+<h3>Command Entry</h3>
+<form ngNativeValidate [formGroup]="commandForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="battleship" class="form-label col-2"> Battleship </label>
+    <input
+      id="battleship"
+      class="form-control"
+      type="text"
+      formControlName="battleship"
+      required
+    />
+  </div>
+  <div>
+    <label for="weapon" class="form-label"> Weapon System </label>
+    <input
+      id="weapon"
+      class="form-control"
+      type="text"
+      formControlName="weapon_system"
+      required
+    />
+  </div>
+  <div>
+    <label for="target" class="form-label"> Target </label>
+    <input
+      id="target"
+      class="form-control"
+      type="text"
+      formControlName="target"
+      required
+    />
+  </div>
+  <div>
+    <label for="quantity" min="1" class="form-label"> Quantity </label>
+    <input
+      id="quantity"
+      class="form-control"
+      type="number"
+      formControlName="quantity"
+      min="1"
+      onkeypress="return event.charCode >= 48"
+            required
+    />
+  </div>
+  <div>
+    <label for="rate" min="1" class="form-label"> Rate </label>
+    <input
+      id="rate"
+      class="form-control"
+      type="number"
+      formControlName="rate"
+      min="0.1"
+      step="0.1"
+      required
+    />
+  </div>
+  <div class="mt-3">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>

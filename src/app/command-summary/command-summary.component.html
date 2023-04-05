@@ -1,0 +1,56 @@
+<h3>Command Summary</h3>
+<h5>Executive Summary:</h5>
+<div>
+  Total number of commands: {{ total_commands }} <br />
+  Total quantity: {{ total_quantity }} <br />
+  Average rate: {{ avg_rate }} <br />
+  Total number of combinable attacks: {{ combinable }}
+  <ul *ngFor="let entry of combined_entries">
+    <li>
+      [{{ entry.battleship }}, {{ entry.weapon }}, {{ entry.target }}]: quantity
+      = {{ entry.quantity }}, rate = {{ entry.rate }}
+    </li>
+  </ul>
+</div>
+<br />
+<h5>Weapon Summary:</h5>
+<div>
+  Total number of commands: {{ total_commands }} <br />
+  <div class="fixTableHead">
+    <table class="table">
+      <thead>
+        <th scope="col">Weapon</th>
+        <th scope="col">Total Quantity</th>
+        <th scope="col">Average Rate</th>
+      </thead>
+      <tbody *ngFor="let entry of weapon_entries">
+        <tr>
+          <td>{{ entry[0] }}</td>
+          <td>{{ entry[1].quantity }}</td>
+          <td>{{ entry[1].rate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br />
+<h5>Target Summary:</h5>
+<div>
+  Total number of commands: {{ total_commands }} <br />
+  <div class="fixTableHead">
+    <table class="table">
+        <thead>
+          <th scope="col">Target</th>
+          <th scope="col">Total Quantity</th>
+          <th scope="col">Average Rate</th>
+        </thead>
+        <tbody *ngFor="let entry of target_entries">
+          <tr>
+            <td>{{ entry[0] }}</td>
+            <td>{{ entry[1].quantity }}</td>
+            <td>{{ entry[1].rate }}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>

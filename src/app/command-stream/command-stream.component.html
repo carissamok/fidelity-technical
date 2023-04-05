@@ -1,0 +1,22 @@
+<h3>Command Stream</h3>
+<div class="fixTableHead">
+    <table class="table">
+        <thead>
+            <th scope="col">Battleship</th>
+            <th scope="col">Weapon System</th>
+            <th scope="col">Target</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Rate</th>
+        </thead>
+        <tbody *ngFor="let command of commands">
+            <tr>
+                <td>{{ command.battleship }}</td>
+                <td>{{ command.weapon_system }}</td>
+                <td>{{ command.target }}</td>
+                <td>{{ command.quantity }}</td>
+                <td>{{ command.rate }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
